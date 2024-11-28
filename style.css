@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .section {
+    width: 100%;
+    height: 55vw; /* The height is equal to the max width of the viewport */
+  }
+  
+
+
+  .section img{
+    width: 100%; 
+  }
+  
+  
