@@ -10,82 +10,103 @@ body {
   
   .section {
     width: 100%;
-    height: 55vw; /* The height is equal to the max width of the viewport */
+    height: 55vw; /* Maintain aspect ratio */
   }
   
   .contact_title {
     width: 100%;
-    height: 29vw; /* The height is equal to the max width of the viewport */
-  }
-
-
-  .contact_title img{
-    width: 100%; 
+    height: 29vw; /* Maintain aspect ratio */
   }
   
-
+  .contact_title img {
+    width: 100%;
+  }
+  
   .contact_content {
     margin-top: -1%;
     width: 100%;
-    background-color: rgb(255, 210, 143);
-    height: 25vw; /* The height is equal to the max width of the viewport */
+    background-color: rgb(255, 210, 143); /* Beige-like background */
+    height: auto; /* Adjust height based on content */
     font-family: 'Shrikhand', cursive;
     color: white;
-}
-
-  .contact{
-    width: 20%;
-    /*height: 10%;*/
-    background-color: red;
-    margin-top: 3%;
-    margin-left: 40%;
-    font-size: 25px;
-    border-radius: 20% 20% 20% 20%;
-    background-color: #a52a2a; /* Red color for the pill */
-    color: #fff; /* White text */
-    font-family: 'Shrikhand', cursive; /* Optional font styling */
-    font-size: 1.5rem; /* Adjust font size */
-    padding: 10px 30px; /* Padding for height and width */
-    border-radius: 50px; /* Fully rounded corners */
-    text-align: center; /* Center the text */
-    display: inline-block; /* Ensure the div sizes to its content */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional shadow for effect */
-  }
-
- 
-.contact_content a {
-    text-decoration: none;
-    color: white;
-}
-  .socmed {
-    width: 10%;
-    height: 100%;
-    margin-top: 2%;
-    margin-left: 15%;
-    float: left;
-    border-radius: 2%;
-  }
-
-  .socmed img{
-    width: 100%; 
-  }
-
-
-  .bungkus_socmed {
-    width: 50%;
-    height: 20%;
-    margin-top: 2%;
-    margin-left: 30%;
-  }
-
-  .bungkus_socmed .a {
-    text-decoration: none;
-
-  }
-
-
-  .section img{
-    width: 100%; 
+    text-align: center;
+    padding: 20px 0;
   }
   
+  .contact {
+    width: 20%; /* Default width for desktop */
+    background-color: #a52a2a; /* Red color */
+    color: #fff; /* White text */
+    font-family: 'Shrikhand', cursive;
+    font-size: 1.5rem;
+    padding: 10px 30px;
+    border-radius: 50px; /* Fully rounded */
+    text-align: center;
+    margin: 3% auto; /* Center horizontally */
+    display: block;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .contact:hover {
+    background-color: #b33030; /* Slightly darker red on hover */
+  }
+  
+  .contact_content a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .socmed {
+    width: 10%; /* Default size for social media icons */
+    margin: 10px auto;
+    display: inline-block;
+    text-align: center;
+    border-radius: 2%;
+  }
+  
+  .socmed img {
+    width: 100%;
+  }
+  
+  .bungkus_socmed {
+    width: 60%; /* Set width for desktop */
+    margin: 20px auto;
+    text-align: center; /* Center-align the social media icons */
+    display: flex;
+    justify-content: space-around; /* Evenly space the icons */
+  }
+  
+  .section img {
+    width: 100%;
+  }
+  
+  /* Mobile-Specific Styling */
+  @media (max-width: 768px) {
+    .contact {
+      width: 80%; /* Full width on mobile */
+      font-size: 1.2rem; /* Slightly smaller font */
+      padding: 10px 20px; /* Adjust padding */
+      margin: 10px auto; /* Ensure proper spacing */
+    }
+  
+    .contact_content {
+      width: 100%;
+    }
+  
+    .bungkus_socmed {
+      width: 100%; /* Full width on mobile */
+      flex-direction: column; /* Stack icons vertically */
+      align-items: center;
+    }
+  
+    .socmed {
+      width: 20%; /* Slightly larger icons for better visibility */
+      margin: 5px auto; /* Add spacing between icons */
+      float: left;
+    }
+  
+    .socmed img {
+      width: 100%; /* Ensure icons scale properly */
+    }
+  }
   
